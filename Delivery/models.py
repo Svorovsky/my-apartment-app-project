@@ -1,3 +1,24 @@
 from django.db import models
+from django.contrib import admin
 
-# Create your models here.
+"""
+from django.core.files.images import ImageFile
+from django.core.files import File
+
+
+class DeliveryServiceLogo(ImageFile):
+    logo = models.ImageField(width=200px, height=200px
+
+class MenuFile(File):
+    name = ()
+"""
+
+class DeliveryService(models.Model):
+    title = models.CharField(max_length=50)
+    subtitle = models.CharField(max_length=100)
+    logo = models.ImageField(upload_to=' ')
+    menu_file = models.FileField(upload_to=' ')
+    def __unicode__(self):
+        return self.title
+
+admin.site.register(DeliveryService)

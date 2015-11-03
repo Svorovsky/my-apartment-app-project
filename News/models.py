@@ -1,3 +1,14 @@
 from django.db import models
+from django.contrib import admin
+from django.core.files.images import ImageFile
 
-# Create your models here.
+class NewsItem(models.Model):
+    title = models.CharField(max_length=50)
+    subtitle = models.CharField(max_length=50) 
+    content = models.TextField()
+    image = models.ImageField()
+    def __unicode__(self):
+        return self.title
+
+admin.site.register(NewsItem)
+
