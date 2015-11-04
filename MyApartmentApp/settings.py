@@ -38,12 +38,15 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'MyApartmentApp',
+    'UserProfile',
     'GuestPass',
     'Services',
     'News',
     'Delivery',
     'MyBills', 
+    'InfoPage',
 )
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

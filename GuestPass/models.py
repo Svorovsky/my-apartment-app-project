@@ -21,6 +21,5 @@ class GuestPass(models.Model):
     class Meta:
         verbose_name_plural = 'Guest passes'
     
-
 admin.site.register(Guest)
 admin.site.register(GuestPass)
