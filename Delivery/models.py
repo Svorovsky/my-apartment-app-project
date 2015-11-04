@@ -16,8 +16,9 @@ class MenuFile(File):
 class DeliveryService(models.Model):
     title = models.CharField(max_length=50)
     subtitle = models.CharField(max_length=100)
-    logo = models.ImageField(upload_to=' ')
-    menu_file = models.FileField(upload_to=' ')
+    logo = models.ImageField(upload_to='/Delivery/logos')
+    menu_file = models.FileField(upload_to='/Delivery/menu_files')
+
     def __unicode__(self):
         return self.title
 

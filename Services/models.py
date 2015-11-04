@@ -8,6 +8,7 @@ class Service (models.Model):
     price = models.IntegerField()
     service_company_name = models.CharField(max_length=50)
     service_company_phone = PhoneNumberField()
+
     def __unicode__(self):
         return self.title
 

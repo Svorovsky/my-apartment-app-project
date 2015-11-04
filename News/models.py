@@ -7,6 +7,7 @@ class NewsItem(models.Model):
     subtitle = models.CharField(max_length=50) 
     content = models.TextField()
     image = models.ImageField()
+
     def __unicode__(self):
         return self.title
 
