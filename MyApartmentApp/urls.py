@@ -22,8 +22,9 @@ admin.site.site_header = 'MyApartmentApp'
 
 from django.contrib.admin import AdminSite
 
-urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
+urlpatterns = [ 
     url(r'^api/', include('api.urls')),
+    url(r'^admin/', include(admin.site.urls)),
+    
 ]
 
