@@ -45,6 +45,8 @@ INSTALLED_APPS = (
     'Delivery',
     'MyBills', 
     'InfoPage',
+    'rest_framework',
+    'api',
 )
 
 MIDDLEWARE_CLASSES = (
