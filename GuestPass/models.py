@@ -18,10 +18,10 @@ class GuestPass(models.Model):
     date = models.DateField()
     
     def __unicode__(self):
-        return self.guest.last_name + ' ' + self.car_id
+        return self.guest.last_name + ' ' + self.guest.car_id
 
     class Meta:
-        verbose_name_plural = 'Guest passes'
+        verbose_name_plural = 'GuestPasses'
     
 admin.site.register(Guest)
 admin.site.register(GuestPass)

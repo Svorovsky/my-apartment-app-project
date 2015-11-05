@@ -112,3 +112,15 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = '/home/alexander/DjangoProjects/MyApartmentApp/collected_static/'
 STATICFILES_DIRS = ('/home/alexander/DjangoProjects/MyApartmentApp/src/static', )
+
+
+# Django-REST-framework settings 
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAdminUser'
+    ]
+}
+

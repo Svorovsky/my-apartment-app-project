@@ -1,4 +1,5 @@
 from rest_framework import serializers
+from django.contrib.auth.models import User, Group
 
 from InfoPage.models import InfoUnit
 from Delivery.models import DeliveryService
@@ -7,6 +8,17 @@ from Services.models import Service
 from GuestPass.models import Guest, GuestPass
 from MyBills.models import Bill, PersonalBill
 from UserProfile.models import Person
+
+class UserSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = User
+        fields = ('url', 'username', 'email', 'groups')
+
+
+class GroupSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Group
+        fields = ('url', 'name')
 
 class InfoUnitSerializer(serializers.ModelSerializer):
 
